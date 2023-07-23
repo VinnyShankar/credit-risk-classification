@@ -4,11 +4,15 @@
 
 In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+* This data is about loans. Each row represents one loan, and the columns represent the metadata for that loan (things like loan size, interest rate, borrower's income, etc). Each loan has been labeled as "healthy" or "high-risk."
+* There are two main purposes for this analysis. The first is to test how well a supervised learning model can predict the correct label for a loans ("healthy" or "high risk"). The second purpose is to see if the model's performance improves when random oversampling is introduced. The main methods used were Logistic Regression and RandomOversampling.
+* The stages of machine learning in this study are:
+  - Separate the labels column from the rest of the data
+  - Separate the labels and data into training and testing sets
+  - Fit the training data to a Logistic Regression model
+  - Predict the labels for the testing data
+  - Assess the model's performance based on the balanced accuracy score, the confusion matrix, and the classification report
+  - Repeat the previous steps after using Random Oversampling on the training data
 
 ## Results
 
